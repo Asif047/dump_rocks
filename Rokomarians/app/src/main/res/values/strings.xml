@@ -4,4 +4,18 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <string name="journey">I have been wroking here for last 2 months. Rokomari is an awesome place to work. Its working environment is nice and everyone is awesome here. </string>
+
+    <string name="idea">I want to make an app which will include all the cultural activity in Rokomari. So, this app will represent the culture of Rokomari. </string>
+
+    <string name="good_work">Fahad vai donated blood to a bug :) </string>
+    <string name="title_activity_new_member">NewMemberActivity</string>
+    <string name="title_who">Who am I?</string>
+    <string name="title_contact_info">Contact Info</string>
+    <string name="title_team">Team</string>
+    <string name="title_say_hi">Say Hi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.MeetMe.Fragment.SayHiFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="100dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_say_hi"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/asif"
+                    android:layout_gravity="center"
+                    />
+
+
+                <TextView
+                    android:id="@+id/textview_name_say_hi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="S. M. Asif Ul Haque"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/edittext_say_hi"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:gravity="top|left"
+                            android:textColor="#000000"
+                            android:inputType="textEmailAddress|textMultiLine"
+                            android:lines="20"
+                            android:minLines="5"
+                            android:scrollHorizontally="false"
+                            android:scrollbars="vertical"
+                            android:layout_marginRight="10dp"
+
+                            android:hint="Say hi !!"
+                            android:layout_margin="10dp"
+
+
+                            />
+
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/button_send_say_hi"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/buttonshape"
+                        android:text="send"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

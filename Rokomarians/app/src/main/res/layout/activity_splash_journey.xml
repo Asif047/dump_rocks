@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.Journey.SplashJourney">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/image_splash_rokomari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_journey"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rokomari_journey"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/rokomari_journey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rokomari Journey"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            />
+
+        <View
+            android:id="@+id/first_line"
+            android:layout_below="@+id/image_splash_rokomari"
+            android:layout_width="320dp"
+            android:layout_height="2dp"
+
+            android:background="#0d0d0d" />
+
+
+        <View
+            android:layout_below="@+id/first_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="#0d0d0d" />
+
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

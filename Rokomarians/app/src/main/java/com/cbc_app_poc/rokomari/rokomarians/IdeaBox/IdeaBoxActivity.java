@@ -1,89 +1,40 @@
-package com.cbc_app_poc.rokomari.rokomarians;
+package com.cbc_app_poc.rokomari.rokomarians.IdeaBox;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
-import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.IdeaBoxActivity;
-import com.cbc_app_poc.rokomari.rokomarians.Journey.SplashJourney;
-import com.cbc_app_poc.rokomari.rokomarians.MeetMe.MeetMeActivity;
+import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
+import com.cbc_app_poc.rokomari.rokomarians.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class IdeaBoxActivity extends AppCompatActivity {
+
+    private FloatingActionButton btnAddIdea;
 
     private DrawerLayout dl ;
     private ActionBarDrawerToggle toggle ;
     private Toolbar toolbar;
 
-    private TextView tvJourney,tvIdea,tvGoodWork,tvRecreation,tvWhat,tvHappyWall,tvMeetMe,
-                        tvFeeling,tvNotification;
-
-    private CardView cardJourney,cardIdea, cardMeetMe;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_idea_box);
 
-        cardJourney = findViewById(R.id.card_journey);
-        cardIdea = findViewById(R.id.card_idea);
-        cardMeetMe = findViewById(R.id.card_meet_me);
-
-        tvJourney=findViewById(R.id.textview_journey);
-        tvIdea=findViewById(R.id.textview_idea);
-        tvGoodWork=findViewById(R.id.textview_good_work);
-        tvRecreation=findViewById(R.id.textview_recreation);
-        tvWhat=findViewById(R.id.textview_what_should_i_do);
-        tvHappyWall=findViewById(R.id.textview_happy_wall);
-        tvMeetMe=findViewById(R.id.textview_meet_me);
-        tvFeeling=findViewById(R.id.textview_feeling);
-        tvNotification =findViewById(R.id.textview_notification);
-
-        Typeface tf=Typeface.createFromAsset(getAssets(), "font_amaranth/Amaranth-Bold.ttf");
-        tvJourney.setTypeface(tf);
-        tvIdea.setTypeface(tf);
-        tvGoodWork.setTypeface(tf);
-        tvRecreation.setTypeface(tf);
-        tvWhat.setTypeface(tf);
-        tvHappyWall.setTypeface(tf);
-        tvMeetMe.setTypeface(tf);
-        tvFeeling.setTypeface(tf);
-
-        getSupportActionBar().hide();
-
-
-        //get notification starts
-//        Animation animationToLeft = new TranslateAnimation(500, -600, 0, 0);
-//        animationToLeft.setDuration(12000);
-//        animationToLeft.setRepeatMode(Animation.RESTART);
-//        animationToLeft.setRepeatCount(Animation.INFINITE);
-//
-//        tvNotification.setAnimation(animationToLeft);
-        tvNotification.setText("* This is a news bulletin. This is a long news bulletin. Hope you all are well.............");
-        tvNotification.setSelected(true);
-        //get notification ends
-
-       dl = (DrawerLayout) findViewById(R.id.dl);
-       toolbar = (Toolbar) findViewById(R.id.toolbar);
+        dl = (DrawerLayout) findViewById(R.id.dl);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_idea);
 
         // Setting toolbar as the ActionBar with setSupportActionBar() call
-       // setSupportActionBar(toolbar);
 
-        toolbar.setTitle("Home Page");
 
 
         toggle = new ActionBarDrawerToggle(this,dl,toolbar,R.string.open,R.string.close);
@@ -105,32 +56,15 @@ public class HomeActivity extends AppCompatActivity {
         nav_user_email.setText("asif@rokomari.com");
         //new ends
 
-        cardJourney.setOnClickListener(new View.OnClickListener() {
+        btnAddIdea = findViewById(R.id.button_add_idea);
+        btnAddIdea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, SplashJourney.class);
+                Intent intent=new Intent(IdeaBoxActivity.this, PostIdeaActivity.class);
                 startActivity(intent);
             }
         });
-
-        cardIdea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(HomeActivity.this,IdeaBoxActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        cardMeetMe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, MeetMeActivity.class);
-                startActivity(intent);
-            }
-        });
-
     }
-
 
 
     public void selectItemDrawer(MenuItem menuItem) {
@@ -150,7 +84,7 @@ public class HomeActivity extends AppCompatActivity {
 //                startActivity(intent);
                 break;
             case R.id.idea:
-                Intent intent2=new Intent(HomeActivity.this,IdeaBoxActivity.class);
+                Intent intent2=new Intent(IdeaBoxActivity.this,IdeaBoxActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.good_work:
@@ -201,6 +135,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
+
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -210,6 +145,5 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }
