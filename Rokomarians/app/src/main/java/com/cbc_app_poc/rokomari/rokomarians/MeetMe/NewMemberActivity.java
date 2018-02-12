@@ -35,7 +35,6 @@ public class NewMemberActivity extends AppCompatActivity {
 
 
 
-
             switch (item.getItemId()) {
                 case R.id.navigation_who:
 

@@ -10,13 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".Journey.JourneyActivity" />
         <activity android:name=".IdeaBox.IdeaBoxActivity" />
         <activity
@@ -28,7 +22,25 @@
             android:name=".MeetMe.NewMemberActivity"
             android:label="@string/title_activity_new_member"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".Journey.SplashJourney"></activity>
+        <activity android:name=".Journey.SplashJourney" />
+        <activity android:name=".MeetMe.MemberListActivity" />
+        <activity android:name=".GoodWork.NominateActivity" />
+        <activity android:name=".GoodWork.PostNominateActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".Profile.ProfileActivity"></activity>
+        <activity android:name=".Profile.EditProfileActivity">
+
+        </activity>
+        <activity android:name=".HappyWall.HappyWallActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

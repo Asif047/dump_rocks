@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.Profile.EditProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:layout_marginBottom="100dp"
+                android:layout_margin="10dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_who"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/asif"
+                    android:layout_gravity="center"
+                    />
+
+
+                <TextView
+                    android:id="@+id/textview_change_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_change_image"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/edittext_phone_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+
+                <EditText
+                    android:id="@+id/edittext_address_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Address"
+                    android:layout_margin="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_hometown_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Hometown"
+                    android:layout_margin="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_education_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Education"
+                    android:layout_margin="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_hobbies_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Hobbies"
+                    android:layout_margin="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_team_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Team"
+                    android:layout_margin="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_designation_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Designation"
+                    android:layout_margin="10dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/edittext_work_responsibility_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Work Responsibility"
+                    android:layout_margin="10dp"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button_add_idea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_anchorGravity="bottom|right|end"
+
+        android:src="@drawable/icon_save"
+        />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

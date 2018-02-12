@@ -30,12 +30,11 @@ public class IdeaBoxActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idea_box);
 
+        //toolbar and navigation drawer work starts
+        getSupportActionBar().hide();
         dl = (DrawerLayout) findViewById(R.id.dl);
         toolbar = (Toolbar) findViewById(R.id.toolbar_idea);
-
-        // Setting toolbar as the ActionBar with setSupportActionBar() call
-
-
+        toolbar.setTitle("Idea Box");
 
         toggle = new ActionBarDrawerToggle(this,dl,toolbar,R.string.open,R.string.close);
         dl.addDrawerListener(toggle);
@@ -46,15 +45,13 @@ public class IdeaBoxActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         setupDrawerContent(nvDrawer);
 
-
-        //new starts
         View hView =  nvDrawer.getHeaderView(0);
         TextView nav_user_name = (TextView)hView.findViewById(R.id.textview_name_header);
         TextView nav_user_email = (TextView)hView.findViewById(R.id.textview_email_header);
 
         nav_user_name.setText("Asif");
         nav_user_email.setText("asif@rokomari.com");
-        //new ends
+        //toolbar and navigation drawer work ends
 
         btnAddIdea = findViewById(R.id.button_add_idea);
         btnAddIdea.setOnClickListener(new View.OnClickListener() {
