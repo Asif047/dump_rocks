@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.GoodWork.DetailsGoodWorkActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_who_nominated"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/asif"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/textview_name_who_nominated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S. M. Asif Ul haque"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/textview_reason_of_nomination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:text="Fahad vai donated blood to a bug :) "
+                />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#0d0d0d" />
+
+
+            <TextView
+                android:id="@+id/textview_nominated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Notimated"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#0d0d0d" />
+
+            <ImageView
+                android:id="@+id/image_nominated"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/fahad_vai"
+                />
+
+            <TextView
+                android:id="@+id/textview_nominated_name_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Fahad"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+
+
+                <ImageView
+                    android:id="@+id/imageview_like_work_details"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+
+                    android:src="@drawable/ic_good_work"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textview_num_like_work_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

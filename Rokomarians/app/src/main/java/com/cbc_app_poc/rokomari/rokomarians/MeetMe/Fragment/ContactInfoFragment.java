@@ -67,7 +67,7 @@ public class ContactInfoFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            Toast.makeText(context, "Contact Info fragment attached", Toast.LENGTH_LONG).show();
+            //Toast.makeText(context, "Contact Info fragment attached", Toast.LENGTH_LONG).show();
         }
     }
 

@@ -2,6 +2,7 @@ package com.cbc_app_poc.rokomari.rokomarians.MeetMe;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -68,7 +69,6 @@ public class NewMemberActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-
 
 
         final Intent intent = getIntent();

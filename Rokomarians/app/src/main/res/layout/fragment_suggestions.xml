@@ -1,0 +1,166 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.WhatShouldIDo.Fragments.SuggestionsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="#b72c2c"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="10dp"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text="1"
+                        android:textSize="20dp"
+                        android:textColor="#000000"
+                        android:layout_margin="5dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textview_problem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="I locked out my house and lost the keys\nWhat should I do?"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Suggestions"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+
+                android:layout_margin="5dp"
+                android:background="#0d0d0d" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_suggestions"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                ></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+
+                android:layout_margin="5dp"
+                android:background="#0d0d0d" />
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_alignParentBottom="true"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <EditText
+                    android:id="@+id/edittext_suggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Write Suggestion"
+                    android:layout_margin="10dp"
+
+
+                    />
+
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_send_suggestion"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:text="send"
+                />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

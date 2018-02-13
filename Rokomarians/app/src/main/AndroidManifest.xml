@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity"></activity>
         <activity android:name=".Journey.JourneyActivity" />
         <activity android:name=".IdeaBox.IdeaBoxActivity" />
         <activity
@@ -20,27 +20,29 @@
         <activity android:name=".MeetMe.MeetMeActivity" />
         <activity
             android:name=".MeetMe.NewMemberActivity"
-            android:label="@string/title_activity_new_member"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
+            android:label="@string/title_activity_new_member" />
         <activity android:name=".Journey.SplashJourney" />
         <activity android:name=".MeetMe.MemberListActivity" />
         <activity android:name=".GoodWork.NominateActivity" />
         <activity android:name=".GoodWork.PostNominateActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".Profile.ProfileActivity"></activity>
-        <activity android:name=".Profile.EditProfileActivity">
-
-        </activity>
-        <activity android:name=".HappyWall.HappyWallActivity">
-
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".Profile.EditProfileActivity" />
+        <activity
+            android:name=".HappyWall.HappyWallActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".WhatShouldIDo.WhatActivity" />
+        <activity android:name=".How_r_u_feeling.FeelingsActivity" />
+        <activity android:name=".GoodWork.DetailsGoodWorkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".HappyWall.DetailsHappyWallActivity"></activity>
+        <activity android:name=".IdeaBox.DetailsIdeaActivity"></activity>
     </application>
 
 </manifest>

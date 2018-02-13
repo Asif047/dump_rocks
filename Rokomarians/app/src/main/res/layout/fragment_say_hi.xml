@@ -6,7 +6,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -47,61 +49,63 @@
                     android:layout_height="240dp"
                     android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-
-                        >
-
-                        <EditText
-                            android:id="@+id/edittext_say_hi"
-                            android:layout_width="match_parent"
-                            android:layout_height="80dp"
-                            android:gravity="top|left"
-                            android:textColor="#000000"
-                            android:inputType="textEmailAddress|textMultiLine"
-                            android:lines="20"
-                            android:minLines="5"
-                            android:scrollHorizontally="false"
-                            android:scrollbars="vertical"
-                            android:layout_marginRight="10dp"
-
-                            android:hint="Say hi !!"
-                            android:layout_margin="10dp"
-
-
-                            />
-
-
-
-                    </android.support.design.widget.TextInputLayout>
-
-                    <Button
-                        android:id="@+id/button_send_say_hi"
-                        android:layout_width="70dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginRight="10dp"
-                        android:textColor="#ffffff"
-                        android:background="@drawable/buttonshape"
-                        android:text="send"
-                        />
-
-
-                </LinearLayout>
 
 
             </LinearLayout>
 
 
         </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <EditText
+                    android:id="@+id/edittext_say_hi"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Say hi !!"
+                    android:layout_margin="10dp"
+
+
+                    />
+
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_send_say_hi"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:text="send"
+                />
+
+
+        </LinearLayout>
 
     </RelativeLayout>
 

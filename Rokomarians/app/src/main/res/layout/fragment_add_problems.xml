@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.WhatShouldIDo.Fragments.AddProblemsFragment">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="5dp"
+           android:orientation="vertical"
+           android:layout_below="@+id/toolbar"
+           android:layout_marginTop="10dp"
+           android:id="@+id/linearLayout">
+
+
+           <ImageView
+               android:layout_width="120dp"
+               android:layout_height="120dp"
+               android:layout_gravity="center"
+
+               android:src="@drawable/ic_what"
+               android:layout_marginTop="10dp"
+               />
+
+
+
+
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+
+               android:layout_marginTop="20dp"
+               android:background="@drawable/edittext_layout"
+               >
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="20dp"
+                   android:layout_marginRight="10dp"
+                   />
+
+               <android.support.design.widget.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+
+                   >
+
+                   <EditText
+                       android:id="@+id/edittext_problem"
+                       android:layout_width="fill_parent"
+                       android:layout_height="120dp"
+                       android:gravity="top|left"
+                       android:textColor="#000000"
+                       android:inputType="textEmailAddress|textMultiLine"
+                       android:lines="20"
+                       android:minLines="5"
+                       android:scrollHorizontally="false"
+                       android:scrollbars="vertical"
+                       android:layout_marginRight="10dp"
+
+                       android:hint="Write problem"
+
+                       />
+
+               </android.support.design.widget.TextInputLayout>
+
+           </LinearLayout>
+
+
+
+
+       </LinearLayout>
+
+
+       <Button
+           android:id="@+id/button_add_problem"
+           android:layout_width="match_parent"
+           android:layout_height="70dp"
+           android:text="Add Problem"
+           android:textSize="20dp"
+           android:textColor="#ffffff"
+           android:background="@color/colorPrimary"
+           android:layout_marginTop="20dp"
+           android:layout_alignParentBottom="true"
+           />
+
+
+   </RelativeLayout>
+
+</FrameLayout>

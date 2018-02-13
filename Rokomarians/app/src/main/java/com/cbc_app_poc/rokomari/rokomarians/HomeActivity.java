@@ -19,9 +19,13 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
+import com.cbc_app_poc.rokomari.rokomarians.GoodWork.GoodWorkActivity;
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.HappyWallActivity;
+import com.cbc_app_poc.rokomari.rokomarians.How_r_u_feeling.FeelingsActivity;
 import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.IdeaBoxActivity;
 import com.cbc_app_poc.rokomari.rokomarians.Journey.SplashJourney;
 import com.cbc_app_poc.rokomari.rokomarians.MeetMe.MeetMeActivity;
+import com.cbc_app_poc.rokomari.rokomarians.WhatShouldIDo.WhatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -32,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     private TextView tvJourney,tvIdea,tvGoodWork,tvRecreation,tvWhat,tvHappyWall,tvMeetMe,
                         tvFeeling,tvNotification;
 
-    private CardView cardJourney,cardIdea, cardMeetMe;
+    private CardView cardJourney,cardIdea, cardMeetMe,cardGoodWork,cardHappyWall,cardWhat,cardFeelings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,10 @@ public class HomeActivity extends AppCompatActivity {
         cardJourney = findViewById(R.id.card_journey);
         cardIdea = findViewById(R.id.card_idea);
         cardMeetMe = findViewById(R.id.card_meet_me);
+        cardGoodWork = findViewById(R.id.card_good_work);
+        cardHappyWall = findViewById(R.id.card_happy_wall);
+        cardWhat = findViewById(R.id.card_what);
+        cardFeelings = findViewById(R.id.card_feeling);
 
         tvJourney=findViewById(R.id.textview_journey);
         tvIdea=findViewById(R.id.textview_idea);
@@ -125,6 +133,38 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, MeetMeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardGoodWork.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, GoodWorkActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardHappyWall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, HappyWallActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardWhat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, WhatActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardFeelings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, FeelingsActivity.class);
                 startActivity(intent);
             }
         });

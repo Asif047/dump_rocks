@@ -70,7 +70,7 @@ public class WhoFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            Toast.makeText(context, "Who am I fragment attached", Toast.LENGTH_LONG).show();
+           // Toast.makeText(context, "Who am I fragment attached", Toast.LENGTH_LONG).show();
         }
     }
 

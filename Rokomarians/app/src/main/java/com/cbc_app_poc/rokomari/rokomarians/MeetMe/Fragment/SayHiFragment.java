@@ -66,7 +66,7 @@ public class SayHiFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            Toast.makeText(context, "Say Hi fragment attached",Toast.LENGTH_LONG).show();
+            //Toast.makeText(context, "Say Hi fragment attached",Toast.LENGTH_LONG).show();
         }
     }
 

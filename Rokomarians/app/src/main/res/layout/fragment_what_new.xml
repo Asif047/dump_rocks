@@ -12,6 +12,7 @@
         <RelativeLayout
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:padding="25dp"
             android:orientation="vertical"
             android:background="@drawable/icon_note">
 
@@ -24,6 +25,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/textview_name1_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -33,6 +35,7 @@
                     android:textSize="20dp"
                     />
                 <TextView
+                    android:id="@+id/textview_happy_post1_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -50,6 +53,7 @@
         <RelativeLayout
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:padding="25dp"
             android:layout_marginLeft="210dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/icon_note"
@@ -64,6 +68,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/textview_name2_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -73,6 +78,7 @@
                     android:textSize="20dp"
                     />
                 <TextView
+                    android:id="@+id/textview_happy_post2_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -89,6 +95,7 @@
         <RelativeLayout
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:padding="25dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@drawable/icon_note">
@@ -103,6 +110,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/textview_name3_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -112,6 +120,7 @@
                     android:textSize="20dp"
                     />
                 <TextView
+                    android:id="@+id/textview_happy_post3_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -129,6 +138,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="320dp"
+            android:padding="25dp"
             android:background="@drawable/icon_note">
 
             <LinearLayout
@@ -140,6 +150,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/textview_name4_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -149,6 +160,7 @@
                     android:textSize="20dp"
                     />
                 <TextView
+                    android:id="@+id/textview_happy_post4_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -167,6 +179,7 @@
             android:layout_height="150dp"
             android:layout_marginTop="340dp"
             android:layout_marginLeft="220dp"
+            android:padding="25dp"
             android:background="@drawable/icon_note">
 
             <LinearLayout
@@ -178,6 +191,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/textview_name5_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -187,10 +201,11 @@
                     android:textSize="20dp"
                     />
                 <TextView
+                    android:id="@+id/textview_happy_post5_wall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="Got GPA 5"
+                    android:text="Got GPA 5\nApp released\nkhela hobe !!!\nachievement unlocked\nPaper published!!!"
                     android:textColor="#000000"
                     android:textSize="15dp"
                     android:layout_marginTop="5dp"

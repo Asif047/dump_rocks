@@ -63,7 +63,7 @@ public class TeamFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            Toast.makeText(context,"Team fragment attached", Toast.LENGTH_LONG).show();
+            //Toast.makeText(context,"Team fragment attached", Toast.LENGTH_LONG).show();
         }
     }
 
