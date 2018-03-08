@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.SplashActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C5EFF7"
+        >
+
+
+        <pl.bclogic.pulsator4droid.library.PulsatorLayout
+            android:id="@+id/pulsator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:pulse_color="@color/colorAccent"
+            app:pulse_count="7"
+            app:pulse_duration="3000"
+            app:pulse_interpolator="Linear"
+            app:pulse_repeat="0"
+            app:pulse_startFromScratch="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:id="@+id/imageview_splash_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/app_logo"
+            />
+
+        <TextView
+            android:id="@+id/textview_splash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Rokomarian"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_below="@+id/imageview_splash_image"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:textColor="#481010"
+            android:layout_marginTop="15dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

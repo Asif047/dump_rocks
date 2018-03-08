@@ -49,6 +49,31 @@
 
 
                 <EditText
+                    android:id="@+id/edittext_first_name_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_last_name_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+
+
+                <EditText
                     android:id="@+id/edittext_phone_edit_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -194,7 +219,7 @@
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/button_add_idea"
+        android:id="@+id/button_save_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"

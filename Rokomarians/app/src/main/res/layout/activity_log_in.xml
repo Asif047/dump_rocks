@@ -95,16 +95,6 @@
         </LinearLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/text_log_in_page"
-            android:textColor="#000000"
-            android:gravity="center"
-            />
 
         <Button
             android:id="@+id/button_sign_in"
@@ -119,6 +109,19 @@
             android:textStyle="bold"
             android:background="@drawable/buttonshape"
 
+            />
+
+
+        <TextView
+            android:id="@+id/textview_login_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_log_in_page"
+            android:textColor="#000000"
+            android:gravity="center"
             />
 
 

@@ -27,7 +27,7 @@
                 >
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/image_who"
+                    android:id="@+id/imageview_profile"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/asif"
@@ -36,7 +36,7 @@
 
 
                 <TextView
-                    android:id="@+id/textview_name_who"
+                    android:id="@+id/textview_name_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="S. M. Asif Ul Haque"
@@ -151,7 +151,7 @@
                     android:background="#0d0d0d" />
 
                 <TextView
-                    android:id="@+id/textview_hometown"
+                    android:id="@+id/textview_hometown_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Police line, Keshobpur-135,
@@ -181,7 +181,7 @@ Dist: Rajshahi"
                     android:background="#0d0d0d" />
 
                 <TextView
-                    android:id="@+id/textview_education"
+                    android:id="@+id/textview_education_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="School: Govt. Laboratory High School, Rajshahi
@@ -214,7 +214,7 @@ Dist: Rajshahi"
                     android:background="#0d0d0d" />
 
                 <TextView
-                    android:id="@+id/textview_hobbies"
+                    android:id="@+id/textview_hobbies_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Playing video games, Listening music,
@@ -357,7 +357,7 @@ Currently engaged with two projects- DeliMan and NoteMe."
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/button_add_idea"
+        android:id="@+id/button_edit_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
