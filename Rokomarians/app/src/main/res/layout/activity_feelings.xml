@@ -31,7 +31,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/happy"
+                    android:src="@drawable/ic_good_work"
                     android:layout_gravity="center"
                     />
 
@@ -61,7 +61,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/very_happy"
+                    android:src="@drawable/ic_good_work"
                     android:layout_gravity="center"
                     />
 
@@ -103,7 +103,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/sad"
+                    android:src="@drawable/ic_good_work"
                     android:layout_gravity="center"
                     />
 
@@ -133,7 +133,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/very_sad"
+                    android:src="@drawable/ic_good_work"
                     android:layout_gravity="center"
                     />
 
@@ -176,7 +176,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/angry"
+                    android:src="@drawable/ic_good_work"
                     android:layout_gravity="center"
                     />
 
@@ -206,7 +206,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/feeling_nothing"
+                    android:src="@drawable/ic_good_work"
                     android:layout_gravity="center"
                     />
 
