@@ -47,6 +47,45 @@
                     android:layout_marginTop="5dp"
                     />
 
+                <TextView
+                    android:id="@+id/textview_upload_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Image"
+                    android:textColor="#131de7"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+
+                    android:visibility="gone"
+                    />
+
+
+
+                <EditText
+                    android:id="@+id/edittext_first_name_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edittext_last_name_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+
 
                 <EditText
                     android:id="@+id/edittext_phone_edit_profile"
@@ -184,6 +223,26 @@
 
 
 
+                <EditText
+                    android:id="@+id/edittext_joining_date_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="top|left"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="10dp"
+
+                    android:hint="Joining Date"
+                    android:layout_margin="10dp"
+                    />
+
+
+
+
 
             </LinearLayout>
 
@@ -194,7 +253,7 @@
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/button_add_idea"
+        android:id="@+id/button_save_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
