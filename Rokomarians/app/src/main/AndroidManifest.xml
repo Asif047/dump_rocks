@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cbc_app_poc.rokomari.rokomarians">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,8 +31,10 @@
         <activity android:name=".Journey.SplashJourney" />
         <activity android:name=".MeetMe.MemberListActivity" />
         <activity android:name=".GoodWork.NominateActivity" />
-        <activity android:name=".GoodWork.PostNominateActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".GoodWork.PostNominateActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".Register.RegisterActivity"></activity>
         <activity android:name=".LogInActivity" />
         <activity android:name=".Profile.ProfileActivity" />
         <activity android:name=".Profile.EditProfileActivity" />
@@ -34,15 +43,22 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".WhatShouldIDo.WhatActivity" />
         <activity android:name=".How_r_u_feeling.FeelingsActivity" />
-        <activity android:name=".GoodWork.DetailsGoodWorkActivity">
+        <activity android:name=".GoodWork.DetailsGoodWorkActivity" />
+        <activity android:name=".HappyWall.DetailsMyHappyPostActivity" />
+        <activity android:name=".IdeaBox.DetailsIdeaActivity" />
+        <activity android:name=".RecreationHour.RecreationListActivity" />
+        <activity android:name=".RecreationHour.ParticipateCategoryActivity" />
+        <activity android:name=".RecreationHour.ParticipateNowActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HappyWall.DetailsHappyWallActivity"></activity>
-        <activity android:name=".IdeaBox.DetailsIdeaActivity"></activity>
+        <activity android:name=".RecreationHour.MyRecordActivity"></activity>
+        <activity android:name=".RecreationHour.EditRecreationHourActivity" />
+        <activity android:name=".HappyWall.UpdateHappyPost.UpdateHappyPostActivity"></activity>
     </application>
 
 </manifest>

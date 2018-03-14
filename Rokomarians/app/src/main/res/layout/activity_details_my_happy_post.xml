@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsHappyWallActivity">
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsMyHappyPostActivity">
 
 
 
@@ -22,7 +22,7 @@
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageview_happy_post_man"
+                android:id="@+id/imageview_my_happy_post"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/asif"
@@ -30,7 +30,7 @@
                 />
 
             <TextView
-                android:id="@+id/textview_happy_post_man"
+                android:id="@+id/textview_my_happy_post_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S. M. Asif Ul haque"
@@ -42,47 +42,12 @@
                 />
 
             <TextView
-                android:id="@+id/textview_happy_post_details"
+                android:id="@+id/textview_my_happy_post_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="This is the happy post details"
                 />
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                >
-
-
-
-                <ImageView
-                    android:id="@+id/imageview_like_happy_post"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-
-                    android:src="@drawable/ic_good_work"
-
-                    />
-
-                <TextView
-                    android:id="@+id/textview_num_like_happy_post"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3"
-                    android:textSize="30dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    />
-
-            </LinearLayout>
-
 
         </LinearLayout>
 

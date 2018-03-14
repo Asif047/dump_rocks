@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.Fragments.HappyPostFragment;
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.Fragments.MyHappyPostFragment;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.Fragments.SeeAllFragment;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.Fragments.WhatNewFragment;
 import com.cbc_app_poc.rokomari.rokomarians.R;
@@ -48,6 +49,7 @@ public class HappyWallActivity extends AppCompatActivity {
         sectionPageadapter.addFragment(new WhatNewFragment(),"What's New");
         sectionPageadapter.addFragment(new SeeAllFragment(),"See All");
         sectionPageadapter.addFragment(new HappyPostFragment(),"Write New");
+        sectionPageadapter.addFragment(new MyHappyPostFragment(), "My Posts");
 
         viewPager.setAdapter(sectionPageadapter);
 
