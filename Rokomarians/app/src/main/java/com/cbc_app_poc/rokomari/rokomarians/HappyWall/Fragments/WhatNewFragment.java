@@ -1,6 +1,7 @@
 package com.cbc_app_poc.rokomari.rokomarians.HappyWall.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
@@ -18,10 +19,12 @@ import android.view.ViewGroup;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cbc_app_poc.rokomari.rokomarians.AlertBox.ShowAlert;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.ApiCallSeeAll;
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.RecyclerAdapterSeeAll;
 import com.cbc_app_poc.rokomari.rokomarians.MeetMe.Fragment.WhoFragment;
 import com.cbc_app_poc.rokomari.rokomarians.Model.ModelHappySeeAll;
@@ -60,6 +63,9 @@ public class WhatNewFragment extends Fragment {
     private TextView tvName1, tvName2, tvName3, tvName4, tvName5;
     private TextView tvPost1, tvPost2, tvPost3, tvPost4, tvPost5;
 
+    private LinearLayout linearSticker1, linearSticker2, linearSticker3, linearSticker4, linearSticker5;
+    private int id = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,6 +84,12 @@ public class WhatNewFragment extends Fragment {
         tvPost3 = view.findViewById(R.id.textview_happy_post3_wall);
         tvPost4 = view.findViewById(R.id.textview_happy_post4_wall);
         tvPost5 = view.findViewById(R.id.textview_happy_post5_wall);
+
+        linearSticker1 = view.findViewById(R.id.linear_sticker1);
+        linearSticker2 = view.findViewById(R.id.linear_sticker2);
+        linearSticker3 = view.findViewById(R.id.linear_sticker3);
+        linearSticker4 = view.findViewById(R.id.linear_sticker4);
+        linearSticker5 = view.findViewById(R.id.linear_sticker5);
 
         //getting account id starts
         SharedPreferences prefs = getContext().getSharedPreferences("Profile_PREF", MODE_PRIVATE);
@@ -105,6 +117,71 @@ public class WhatNewFragment extends Fragment {
 
             }
         }
+
+
+
+        linearSticker1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                id = data.get(0).getId();
+
+                Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
+                intent.putExtra("happy_post_id", id);
+                Log.e("###POST_ID: ", ""+id);
+                getContext().startActivity(intent);
+            }
+        });
+
+        linearSticker2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                id = data.get(1).getId();
+
+                Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
+                intent.putExtra("happy_post_id", id);
+                Log.e("###POST_ID: ", ""+id);
+                getContext().startActivity(intent);
+            }
+        });
+
+
+        linearSticker3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                id = data.get(2).getId();
+
+                Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
+                intent.putExtra("happy_post_id", id);
+                Log.e("###POST_ID: ", ""+id);
+                getContext().startActivity(intent);
+            }
+        });
+
+        linearSticker4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                id = data.get(3).getId();
+
+                Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
+                intent.putExtra("happy_post_id", id);
+                Log.e("###POST_ID: ", ""+id);
+                getContext().startActivity(intent);
+            }
+        });
+
+
+        linearSticker5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                id = data.get(4).getId();
+
+                Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
+                intent.putExtra("happy_post_id", id);
+                Log.e("###POST_ID: ", ""+id);
+                getContext().startActivity(intent);
+            }
+        });
+
 
         return  view;
     }

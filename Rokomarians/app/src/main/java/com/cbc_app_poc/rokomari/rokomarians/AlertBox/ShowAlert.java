@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity;
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.HappyWallActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
 import com.cbc_app_poc.rokomari.rokomarians.LogInActivity;
 import com.cbc_app_poc.rokomari.rokomarians.Profile.ProfileActivity;
@@ -181,12 +183,14 @@ public class ShowAlert {
                     @Override
                     public void onClick(SweetAlertDialog sweetAlertDialog) {
                         ((Activity)context).finish();
-                        Intent intent = new Intent(context, ProfileActivity.class);
+                        Intent intent = new Intent(context, HappyWallActivity.class);
                         context.startActivity(intent);
                     }
                 })
                 .show();
     }
+
+
 
 
 

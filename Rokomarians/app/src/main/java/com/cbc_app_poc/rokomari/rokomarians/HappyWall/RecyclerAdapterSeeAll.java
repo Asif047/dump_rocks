@@ -2,12 +2,16 @@ package com.cbc_app_poc.rokomari.rokomarians.HappyWall;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity;
+import com.cbc_app_poc.rokomari.rokomarians.Interfaces.ItemClickListener;
 import com.cbc_app_poc.rokomari.rokomarians.Model.ModelHappySeeAll;
 import com.cbc_app_poc.rokomari.rokomarians.R;
 
@@ -37,6 +41,19 @@ public class RecyclerAdapterSeeAll extends RecyclerView.Adapter<RecyclerAdapterS
 
         holder.tvName.setText(modelHappySeeAlls.get(position).getName());
         holder.tvDetails.setText(modelHappySeeAlls.get(position).getDetails());
+
+        holder.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onItemClick(int pos) {
+                id = modelHappySeeAlls.get(pos).getId();
+
+                Intent intent = new Intent(context, DetailsSeeAllActivity.class);
+                intent.putExtra("happy_post_id", id);
+                Log.e("###POST_ID: ", ""+id);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -47,6 +64,7 @@ public class RecyclerAdapterSeeAll extends RecyclerView.Adapter<RecyclerAdapterS
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView tvName, tvDetails;
+        ItemClickListener itemClickListener;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -54,9 +72,14 @@ public class RecyclerAdapterSeeAll extends RecyclerView.Adapter<RecyclerAdapterS
             tvDetails = itemView.findViewById(R.id.textview_happy_post_see_all);
         }
 
+        public void setItemClickListener ( ItemClickListener itemClickListener){
+            this.itemClickListener = itemClickListener;
+            itemView.setOnClickListener(this);
+        }
+
         @Override
         public void onClick(View view) {
-
+            this.itemClickListener.onItemClick(this.getLayoutPosition());
         }
     }
 

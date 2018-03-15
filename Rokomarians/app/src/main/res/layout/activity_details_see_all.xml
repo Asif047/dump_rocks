@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageview_details_happy_post"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/asif"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/textview_name_happy_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S. M. Asif Ul haque"
+                android:textSize="17dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scrollbars="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/textview_details_happy_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="This is the happy post details\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ hello"
+
+                    android:layout_marginBottom="100dp"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/imageview_like_details_happy_post"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_good_work"
+                />
+
+            <TextView
+                android:id="@+id/textview_likes_happy_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_details_happy_post"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="5dp"
+            ></android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            >
+
+            <EditText
+                android:id="@+id/edittext_comment_happy_post"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="top|left"
+                android:textColor="#000000"
+                android:inputType="textEmailAddress|textMultiLine"
+                android:lines="5"
+                android:minLines="3"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                android:layout_marginRight="10dp"
+
+                android:hint="Write Comment !!"
+                android:layout_margin="10dp"
+
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_post_comment_happy_post"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"
+            android:text="Post"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
