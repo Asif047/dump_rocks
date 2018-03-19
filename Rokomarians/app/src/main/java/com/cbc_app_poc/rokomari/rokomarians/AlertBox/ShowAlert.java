@@ -5,6 +5,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import com.cbc_app_poc.rokomari.rokomarians.GoodWork.GoodWorkActivity;
+import com.cbc_app_poc.rokomari.rokomarians.GoodWork.NominateActivity;
+import com.cbc_app_poc.rokomari.rokomarians.GoodWork.PostNominateActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.HappyWallActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
@@ -192,6 +195,60 @@ public class ShowAlert {
 
 
 
+    public void showWarningNetNominationActivity()
+    {
+        sweetAlertDialog=new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
+        sweetAlertDialog.setCancelable(false);
+        sweetAlertDialog.setTitleText("No Internet Connection")
+                .setContentText("Please turn on the internet connection and then press OK")
+                .setConfirmText("OK")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        ((Activity)context).finish();
+                        Intent intent = new Intent(context, NominateActivity.class);
+                        context.startActivity(intent);
+                    }
+                })
+                .show();
+    }
+
+    public void showWarningNetPostNominationActivity()
+    {
+        sweetAlertDialog=new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
+        sweetAlertDialog.setCancelable(false);
+        sweetAlertDialog.setTitleText("No Internet Connection")
+                .setContentText("Please turn on the internet connection and then press OK")
+                .setConfirmText("OK")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        ((Activity)context).finish();
+                        Intent intent = new Intent(context, PostNominateActivity.class);
+                        context.startActivity(intent);
+                    }
+                })
+                .show();
+    }
+
+
+    public void showWarningNetGoodWorkActivity()
+    {
+        sweetAlertDialog=new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
+        sweetAlertDialog.setCancelable(false);
+        sweetAlertDialog.setTitleText("No Internet Connection")
+                .setContentText("Please turn on the internet connection and then press OK")
+                .setConfirmText("OK")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        ((Activity)context).finish();
+                        Intent intent = new Intent(context, GoodWorkActivity.class);
+                        context.startActivity(intent);
+                    }
+                })
+                .show();
+    }
 
 
 

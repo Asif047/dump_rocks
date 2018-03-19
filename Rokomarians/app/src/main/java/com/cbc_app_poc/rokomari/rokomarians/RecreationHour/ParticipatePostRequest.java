@@ -37,7 +37,7 @@ public class ParticipatePostRequest {
         RequestBody body = RequestBody.create(JSON,    "{\r\n    \r\n    \"details\" : \""+details+"\",\r\n    \"eventCategories\" : ["+category+"]\r\n}");
 
         Request request = new Request.Builder()
-                .url(url+"recreation/participate")
+                .url(url+"participation/participate")
                 .post(body)
                 .header("Authorization", account_id)
                 .addHeader("content-type", "application/json; charset=utf-8")

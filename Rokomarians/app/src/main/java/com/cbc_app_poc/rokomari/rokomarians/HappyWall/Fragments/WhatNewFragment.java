@@ -1,32 +1,22 @@
 package com.cbc_app_poc.rokomari.rokomarians.HappyWall.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cbc_app_poc.rokomari.rokomarians.AlertBox.ShowAlert;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.ApiCallSeeAll;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity;
-import com.cbc_app_poc.rokomari.rokomarians.HappyWall.RecyclerAdapterSeeAll;
-import com.cbc_app_poc.rokomari.rokomarians.MeetMe.Fragment.WhoFragment;
 import com.cbc_app_poc.rokomari.rokomarians.Model.ModelHappySeeAll;
 import com.cbc_app_poc.rokomari.rokomarians.R;
 import com.cbc_app_poc.rokomari.rokomarians.Utils.MyNetworkCheck;
@@ -107,17 +97,16 @@ public class WhatNewFragment extends Fragment {
 
         pDialog = new SweetAlertDialog(getContext(), SweetAlertDialog.PROGRESS_TYPE);
 
-        if(!myNetworkCheck.isConnected(getContext())){
+        if (!myNetworkCheck.isConnected(getContext())) {
             showAlert.showWarningNetHappySeeAllActivity();
         } else {
-            try{
+            try {
                 path = BASE_URL + "happy-post/";
                 new WhatNewFragment.GetDataFromServer().execute();
-            } catch (Exception e){
+            } catch (Exception e) {
 
             }
         }
-
 
 
         linearSticker1.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +116,7 @@ public class WhatNewFragment extends Fragment {
 
                 Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
                 intent.putExtra("happy_post_id", id);
-                Log.e("###POST_ID: ", ""+id);
+                Log.e("###POST_ID: ", "" + id);
                 getContext().startActivity(intent);
             }
         });
@@ -139,7 +128,7 @@ public class WhatNewFragment extends Fragment {
 
                 Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
                 intent.putExtra("happy_post_id", id);
-                Log.e("###POST_ID: ", ""+id);
+                Log.e("###POST_ID: ", "" + id);
                 getContext().startActivity(intent);
             }
         });
@@ -152,7 +141,7 @@ public class WhatNewFragment extends Fragment {
 
                 Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
                 intent.putExtra("happy_post_id", id);
-                Log.e("###POST_ID: ", ""+id);
+                Log.e("###POST_ID: ", "" + id);
                 getContext().startActivity(intent);
             }
         });
@@ -164,7 +153,7 @@ public class WhatNewFragment extends Fragment {
 
                 Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
                 intent.putExtra("happy_post_id", id);
-                Log.e("###POST_ID: ", ""+id);
+                Log.e("###POST_ID: ", "" + id);
                 getContext().startActivity(intent);
             }
         });
@@ -177,13 +166,13 @@ public class WhatNewFragment extends Fragment {
 
                 Intent intent = new Intent(getContext(), DetailsSeeAllActivity.class);
                 intent.putExtra("happy_post_id", id);
-                Log.e("###POST_ID: ", ""+id);
+                Log.e("###POST_ID: ", "" + id);
                 getContext().startActivity(intent);
             }
         });
 
 
-        return  view;
+        return view;
     }
 
 
@@ -192,12 +181,12 @@ public class WhatNewFragment extends Fragment {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            try{
+            try {
                 pDialog.getProgressHelper().setBarColor(Color.parseColor("#26A65B"));
                 pDialog.setTitleText("Loading");
                 pDialog.setCancelable(false);
                 pDialog.show();
-            } catch (Exception e){
+            } catch (Exception e) {
 
             }
         }
@@ -206,21 +195,21 @@ public class WhatNewFragment extends Fragment {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
-            if(pDialog.isShowing()){
+            if (pDialog.isShowing()) {
                 pDialog.dismiss();
             }
 
-            if(data.size()>=1){
+            if (data.size() >= 1) {
                 tvName1.setText(data.get(0).getName());
                 tvPost1.setText(data.get(0).getDetails());
             }
-            if(data.size()>=2){
+            if (data.size() >= 2) {
                 tvName1.setText(data.get(0).getName());
                 tvPost1.setText(data.get(0).getDetails());
                 tvName2.setText(data.get(1).getName());
                 tvPost2.setText(data.get(1).getDetails());
             }
-            if(data.size()>=3){
+            if (data.size() >= 3) {
                 tvName1.setText(data.get(0).getName());
                 tvPost1.setText(data.get(0).getDetails());
                 tvName2.setText(data.get(1).getName());
@@ -228,7 +217,7 @@ public class WhatNewFragment extends Fragment {
                 tvName3.setText(data.get(2).getName());
                 tvPost3.setText(data.get(2).getDetails());
             }
-            if(data.size()>=4){
+            if (data.size() >= 4) {
                 tvName1.setText(data.get(0).getName());
                 tvPost1.setText(data.get(0).getDetails());
                 tvName2.setText(data.get(1).getName());
@@ -239,7 +228,7 @@ public class WhatNewFragment extends Fragment {
                 tvPost4.setText(data.get(3).getDetails());
             }
 
-            if(data.size()>4){
+            if (data.size() > 4) {
                 tvName1.setText(data.get(0).getName());
                 tvPost1.setText(data.get(0).getDetails());
                 tvName2.setText(data.get(1).getName());
@@ -256,36 +245,35 @@ public class WhatNewFragment extends Fragment {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            try{
+            try {
                 client = new OkHttpClient();
                 response = apiCallSeeAll.GET(client, path, account_id);
                 Log.e("#SEE_ALL_HAPPY_POST:", response);
                 Gson gson = new Gson();
-                Type type = new TypeToken<Collection<ModelHappySeeAll>>(){
+                Type type = new TypeToken<Collection<ModelHappySeeAll>>() {
 
                 }.getType();
 
                 Collection<ModelHappySeeAll> enums = gson.fromJson(response, type);
                 modelHappySeeAlls = enums.toArray(new ModelHappySeeAll[enums.size()]);
 
-                if(data.isEmpty()  && enums.size()>=5){
-                    for( int i = 0; i< 5; i++){
+                if (data.isEmpty() && enums.size() >= 5) {
+                    for (int i = 0; i < 5; i++) {
                         data.add(modelHappySeeAlls[i]);
                     }
                 } else {
-                    for( int i = 0; i< enums.size(); i++){
+                    for (int i = 0; i < enums.size(); i++) {
                         data.add(modelHappySeeAlls[i]);
                     }
                 }
 
-            } catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 
             return null;
         }
     }
-
 
 
 }

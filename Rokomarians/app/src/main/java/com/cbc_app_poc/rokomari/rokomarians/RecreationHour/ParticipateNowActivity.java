@@ -91,7 +91,7 @@ public class ParticipateNowActivity extends AppCompatActivity {
 
 
         try{
-            path = BASE_URL + "recreation/events";
+            path = BASE_URL + "event-categories/";
             new GetDataFromServer().execute();
 
 

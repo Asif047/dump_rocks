@@ -19,26 +19,26 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class UpdateParticipateRequest {
+public class PartcipateDeleteRequest {
 
     private String responsePost = "";
     private Context context;
 
-    public UpdateParticipateRequest(Context context) {
+    public PartcipateDeleteRequest(Context context) {
         this.context = context;
     }
 
 
-    public void putData(String url, String details, String category, final String account_id) {
+    public void deleteData(String url, final String account_id) {
 
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         OkHttpClient client = new OkHttpClient();
 
-        RequestBody body = RequestBody.create(JSON,    "{\r\n    \r\n    \"details\" : \""+details+"\",\r\n    \"eventCategories\" : ["+category+"]\r\n}");
+        RequestBody body = RequestBody.create(JSON,    "");
 
         Request request = new Request.Builder()
-                .url(url+"participation/update-participation")
-                .put(body)
+                .url(url+"participation/cancel-participation")
+                .delete(body)
                 .header("Authorization", account_id)
                 .addHeader("content-type", "application/json; charset=utf-8")
                 .build();
@@ -72,7 +72,7 @@ public class UpdateParticipateRequest {
                     {
                         public void run()
                         {
-                            Toast.makeText(context,"Update failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,"Delete failed", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -82,6 +82,5 @@ public class UpdateParticipateRequest {
         });
 
     }
-
 
 }

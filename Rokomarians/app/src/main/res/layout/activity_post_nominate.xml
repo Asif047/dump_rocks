@@ -24,10 +24,12 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             />
+
         <TextView
+            android:id="@+id/textview_nominated_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="S. M. Asif"
+            android:text=""
             android:gravity="center"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -61,7 +63,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/edittext_idea"
+                    android:id="@+id/edittext_reason_nomination"
                     android:layout_width="fill_parent"
                     android:layout_height="120dp"
                     android:gravity="top|left"
@@ -88,7 +90,7 @@
 
 
     <Button
-        android:id="@+id/button_add_idea"
+        android:id="@+id/button_add_nomination"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="Nominate"

@@ -59,22 +59,18 @@ public class EditRecreationHourActivity extends AppCompatActivity {
     int id[];
     String item_id;
 
-    private ApiCallDeleteParticipation apiCallDeleteParticipation;
+    private PartcipateDeleteRequest partcipateDeleteRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_recreation_hour);
 
+        partcipateDeleteRequest = new PartcipateDeleteRequest(this);
 
         //getting category starts
-
         apiCallEvents = new ApiCallEvents();
-        apiCallDeleteParticipation = new ApiCallDeleteParticipation();
         data = new ArrayList<>();
-
-
-
         //getting category ends
 
         pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
@@ -93,7 +89,7 @@ public class EditRecreationHourActivity extends AppCompatActivity {
 
         try{
 
-            path = BASE_URL + "recreation/events";
+            path = BASE_URL + "event-categories/";
             new EditRecreationHourActivity.GetDataFromServer().execute();
 
         }catch (Exception e){
@@ -219,8 +215,8 @@ public class EditRecreationHourActivity extends AppCompatActivity {
 
 
                     if(item_id.equals("")){
-                        path_delete = BASE_URL + "recreation/cancel-participation";
-                        new EditRecreationHourActivity.DeleteDataFromServer().execute();
+                        partcipateDeleteRequest.deleteData(BASE_URL, account_id);
+
                     } else {
                         Toast.makeText(EditRecreationHourActivity.this, ""+ item_id, Toast.LENGTH_LONG).show();
                         updateParticipateRequest.putData(BASE_URL,
@@ -307,50 +303,6 @@ public class EditRecreationHourActivity extends AppCompatActivity {
 
 
 
-
-    private class DeleteDataFromServer extends AsyncTask< Void, Void, Void> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            try{
-                pDialog.getProgressHelper().setBarColor(Color.parseColor("#26A65B"));
-                pDialog.setTitleText("Loading");
-                pDialog.setCancelable(false);
-                pDialog.show();
-            } catch (Exception e){
-
-            }
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-
-            if(pDialog.isShowing()){
-                pDialog.dismiss();
-            }
-
-            Intent intent = new Intent(EditRecreationHourActivity.this, HomeActivity.class);
-            startActivity(intent);
-
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            try{
-                client = new OkHttpClient();
-                response = apiCallDeleteParticipation.GET(client, path_delete, account_id);
-                Log.e("###GET_MY_RECORD:", response);
-
-            } catch (IOException e){
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-    }
 
 
 }

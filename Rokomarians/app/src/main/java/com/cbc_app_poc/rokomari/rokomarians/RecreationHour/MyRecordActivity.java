@@ -40,10 +40,10 @@ public class MyRecordActivity extends AppCompatActivity {
 
     private SweetAlertDialog pDialog;
     private static final String BASE_URL = "http://192.168.11.231:9090/";
-    private String path, path_delete, response;
+    private String path, response;
     private ModelRecreationMyrecord modelRecreationMyrecords;
     private ApiCallRecreationMyRecord apiCallRecreationMyRecord;
-    private ApiCallDeleteParticipation apiCallDeleteParticipation;
+    private PartcipateDeleteRequest partcipateDeleteRequest;
     private List<ModelRecreationMyrecord> data;
     private MyNetworkCheck myNetworkCheck;
     private ShowAlert showAlert;
@@ -72,7 +72,7 @@ public class MyRecordActivity extends AppCompatActivity {
         //getting account id ends
 
         apiCallRecreationMyRecord = new ApiCallRecreationMyRecord();
-        apiCallDeleteParticipation = new ApiCallDeleteParticipation();
+
         data = new ArrayList<>();
         myNetworkCheck = new MyNetworkCheck();
         showAlert = new ShowAlert(this);
@@ -83,6 +83,7 @@ public class MyRecordActivity extends AppCompatActivity {
         cardMyRecord = findViewById(R.id.card_my_record);
         btnAddParticipate = findViewById(R.id.button_add_participate);
 
+        partcipateDeleteRequest = new PartcipateDeleteRequest(this);
 
         tvName.setText(name);
         pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
@@ -91,7 +92,7 @@ public class MyRecordActivity extends AppCompatActivity {
             showAlert.showWarningNetMyRecordActivity();
         } else {
              try{
-                path = BASE_URL + "recreation/my-record";
+                path = BASE_URL + "participation/my-record";
                 new GetDataFromServer().execute();
             } catch (Exception e){
 
@@ -132,9 +133,7 @@ public class MyRecordActivity extends AppCompatActivity {
     }
 
     public void DeleteParticipate(MenuItem item) {
-
-        path_delete = BASE_URL + "recreation/cancel-participation";
-        new DeleteDataFromServer().execute();
+        partcipateDeleteRequest.deleteData(BASE_URL, account_id);
 
     }
 
@@ -198,55 +197,6 @@ public class MyRecordActivity extends AppCompatActivity {
             return null;
         }
     }
-
-
-
-    private class DeleteDataFromServer extends AsyncTask< Void, Void, Void> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            try{
-                pDialog.getProgressHelper().setBarColor(Color.parseColor("#26A65B"));
-                pDialog.setTitleText("Loading");
-                pDialog.setCancelable(false);
-                pDialog.show();
-            } catch (Exception e){
-
-            }
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-
-            if(pDialog.isShowing()){
-                pDialog.dismiss();
-            }
-
-            Intent intent = new Intent(MyRecordActivity.this, HomeActivity.class);
-            startActivity(intent);
-
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            try{
-                client = new OkHttpClient();
-                response = apiCallDeleteParticipation.GET(client, path_delete, account_id);
-                Log.e("###GET_MY_RECORD:", response);
-
-            } catch (IOException e){
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-    }
-
-
-
 
 
     @Override

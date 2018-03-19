@@ -1,4 +1,4 @@
-package com.cbc_app_poc.rokomari.rokomarians.RecreationHour;
+package com.cbc_app_poc.rokomari.rokomarians.GoodWork.GettingNominationList;
 
 
 import android.app.Activity;
@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
+import com.cbc_app_poc.rokomari.rokomarians.GoodWork.GoodWorkActivity;
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.HappyWallActivity;
+import com.cbc_app_poc.rokomari.rokomarians.Model.Role;
 
 import java.io.IOException;
 
@@ -19,26 +21,29 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class UpdateParticipateRequest {
+public class PostNominationRequest {
 
     private String responsePost = "";
+    private String response_status;
     private Context context;
+    private Role.User user;
+    //private PostActivity postActivity=new PostActivity();
 
-    public UpdateParticipateRequest(Context context) {
+    public PostNominationRequest(Context context) {
         this.context = context;
     }
 
-
-    public void putData(String url, String details, String category, final String account_id) {
+    public void postData(String url,int nominated_id, String reason, String account_id) {
 
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         OkHttpClient client = new OkHttpClient();
 
-        RequestBody body = RequestBody.create(JSON,    "{\r\n    \r\n    \"details\" : \""+details+"\",\r\n    \"eventCategories\" : ["+category+"]\r\n}");
+        RequestBody body = RequestBody.create(JSON,   "{\r\n\t\r\n\t\"nominatedUserId\" : "+nominated_id+"," +
+                "\r\n\t\"reason\" : \" "+reason+"\"\r\n\t\r\n}");
 
         Request request = new Request.Builder()
-                .url(url+"participation/update-participation")
-                .put(body)
+                .url(url+"nomination/new-nomination")
+                .post(body)
                 .header("Authorization", account_id)
                 .addHeader("content-type", "application/json; charset=utf-8")
                 .build();
@@ -47,7 +52,6 @@ public class UpdateParticipateRequest {
             @Override
             public void onFailure(Call call, IOException e) {
                 //Log.e("response", call.request().body().toString());
-
             }
 
             @Override
@@ -56,23 +60,22 @@ public class UpdateParticipateRequest {
 //                if (RegisterActivity.pDialog.isShowing())
 //                    RegisterActivity.pDialog.dismiss();
 
-                Log.e("###ID:", ""+account_id);
                 responsePost = response.code()+"";
                 Log.e("###response_code", responsePost);
 
-
-
                 if(responsePost.equals("200")) {
-                    Intent intent = new Intent(context, HomeActivity.class);
+
+                    Intent intent = new Intent(context, GoodWorkActivity.class);
 
                     context.startActivity(intent);
-                } else
+                }
+                else
                 {
                     ((Activity)context).runOnUiThread(new Runnable()
                     {
                         public void run()
                         {
-                            Toast.makeText(context,"Update failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,"Nomination not submitted", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -82,6 +85,5 @@ public class UpdateParticipateRequest {
         });
 
     }
-
 
 }
