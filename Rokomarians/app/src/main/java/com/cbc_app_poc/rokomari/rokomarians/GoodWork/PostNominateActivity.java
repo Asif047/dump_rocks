@@ -74,7 +74,14 @@ public class PostNominateActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
+
+
+    //back button operation starts
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+    //back button operation ends
+
 }

@@ -1,87 +1,122 @@
-package com.cbc_app_poc.rokomari.rokomarians.IdeaBox;
+package com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.cbc_app_poc.rokomari.rokomarians.HappyWall.SectionPageadapter;
 import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
+import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Fragments.IdeasFragment;
+import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Fragments.MyIdeasFragment;
+import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Fragments.WriteIdeaFragment;
+import com.cbc_app_poc.rokomari.rokomarians.Profile.ProfileActivity;
 import com.cbc_app_poc.rokomari.rokomarians.R;
 
 public class IdeaBoxActivity extends AppCompatActivity {
 
-    private FloatingActionButton btnAddIdea;
+    private static final String TAG="IdeaBoxActivity";
+    private SectionPageadapter mSectionPageadapter;
+    private ViewPager mViewPager;
 
-    private DrawerLayout dl ;
-    private ActionBarDrawerToggle toggle ;
     private Toolbar toolbar;
+
+
+    private DrawerLayout dl;
+    private ActionBarDrawerToggle toggle;
+    NavigationView nvDrawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idea_box);
 
-        //toolbar and navigation drawer work starts
-        getSupportActionBar().hide();
-        dl = (DrawerLayout) findViewById(R.id.dl);
-        toolbar = (Toolbar) findViewById(R.id.toolbar_idea);
+
+
+       getSupportActionBar().hide();
+        toolbar = (Toolbar) findViewById(R.id.toolbar_idea_box);
         toolbar.setTitle("Idea Box");
 
-        toggle = new ActionBarDrawerToggle(this,dl,toolbar,R.string.open,R.string.close);
+
+
+        Log.d(TAG,"on create:starting.");
+
+        mSectionPageadapter=new SectionPageadapter(getSupportFragmentManager());
+
+        mViewPager= (ViewPager) findViewById(R.id.container_idea);
+        setupViewPager(mViewPager);
+
+        TabLayout tabLayout= (TabLayout) findViewById(R.id.tabs_idea);
+        tabLayout.setupWithViewPager(mViewPager);
+
+
+        // navigation drawer work starts
+
+        dl = (DrawerLayout) findViewById(R.id.dl);
+        nvDrawer = (NavigationView) findViewById(R.id.nv);
+
+        toggle = new ActionBarDrawerToggle(this, dl, toolbar, R.string.open, R.string.close);
         dl.addDrawerListener(toggle);
 
-        NavigationView nvDrawer = (NavigationView) findViewById(R.id.nv);
         toggle.syncState();
 
         getSupportActionBar().setHomeButtonEnabled(true);
         setupDrawerContent(nvDrawer);
 
-        View hView =  nvDrawer.getHeaderView(0);
-        TextView nav_user_name = (TextView)hView.findViewById(R.id.textview_name_header);
-        TextView nav_user_email = (TextView)hView.findViewById(R.id.textview_email_header);
+        // navigation drawer work ends
 
-        nav_user_name.setText("Asif");
-        nav_user_email.setText("asif@rokomari.com");
-        //toolbar and navigation drawer work ends
 
-        btnAddIdea = findViewById(R.id.button_add_idea);
-        btnAddIdea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(IdeaBoxActivity.this, PostIdeaActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
+
+
+    private void setupViewPager(ViewPager viewPager)
+    {
+        SectionPageadapter sectionPageadapter=new SectionPageadapter(getSupportFragmentManager());
+        sectionPageadapter.addFragment(new IdeasFragment(),"Ideas");
+        sectionPageadapter.addFragment(new WriteIdeaFragment(),"Write Idea");
+        sectionPageadapter.addFragment(new MyIdeasFragment(),"My Ideas");
+
+        viewPager.setAdapter(sectionPageadapter);
+
+    }
+
+
 
 
     public void selectItemDrawer(MenuItem menuItem) {
         Fragment myFragment = null;
         Class fragmentClass;
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.home:
 //                Toast.makeText(RememberMeActivity.this,"hello",Toast.LENGTH_LONG).show();
 //                fragmentClass = Network.class;
                 break;
             case R.id.profile:
-//                Intent intent1=new Intent(HomeActivity.this,AllNotesActivity.class);
-//                startActivity(intent1);
+
+                    Intent intent = new Intent(IdeaBoxActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+
                 break;
             case R.id.journey:
 //                Intent intent=new Intent(HomeActivity.this,MakeNoteActivity.class);
 //                startActivity(intent);
                 break;
             case R.id.idea:
-                Intent intent2=new Intent(IdeaBoxActivity.this,IdeaBoxActivity.class);
+                Intent intent2 = new Intent(IdeaBoxActivity.this, IdeaBoxActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.good_work:
@@ -120,8 +155,7 @@ public class IdeaBoxActivity extends AppCompatActivity {
         }
         try {
 //            myFragment = (Fragment) fragmentClass.newInstance();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 //        FragmentManager fragmentManager = getSupportFragmentManager();
@@ -142,5 +176,9 @@ public class IdeaBoxActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 
 }

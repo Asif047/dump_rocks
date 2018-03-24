@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Activities.DetailsIdeaActivity">
+    tools:context="com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Activities.DetailsMyIdeaActivity">
 
 
     <ScrollView
@@ -21,7 +21,7 @@
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageview_idea_man_details"
+                android:id="@+id/imageview_idea_man_details_my_idea"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/asif"
@@ -29,7 +29,7 @@
                 />
 
             <TextView
-                android:id="@+id/textview_name_idea_man_details"
+                android:id="@+id/textview_name_idea_man_details_my_idea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S. M. Asif Ul haque"
@@ -40,11 +40,12 @@
                 android:layout_marginTop="10dp"
                 />
 
+
             <TextView
-                android:id="@+id/textview_title_idea_details"
+                android:id="@+id/textview_title_details_my_idea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Title"
+                android:text="Ttile"
                 android:textSize="18dp"
                 android:textColor="#000000"
                 android:textStyle="bold"
@@ -53,7 +54,7 @@
                 />
 
             <TextView
-                android:id="@+id/textview_idea_details"
+                android:id="@+id/textview_idea_details_details_my_idea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -75,7 +76,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imageview_like_idea_details"
+                    android:id="@+id/imageview_like_idea_details_my_idea"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
 
@@ -84,7 +85,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/textview_num_like_idea_details"
+                    android:id="@+id/textview_num_like_idea_details_my_idea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3"

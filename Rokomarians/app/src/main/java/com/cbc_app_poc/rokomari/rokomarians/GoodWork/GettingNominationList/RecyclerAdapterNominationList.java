@@ -14,6 +14,7 @@ import com.cbc_app_poc.rokomari.rokomarians.Interfaces.ItemClickListener;
 import com.cbc_app_poc.rokomari.rokomarians.Model.User;
 import com.cbc_app_poc.rokomari.rokomarians.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerAdapterNominationList extends RecyclerView.Adapter<RecyclerAdapterNominationList.MyViewHolder> {
@@ -65,6 +66,13 @@ public class RecyclerAdapterNominationList extends RecyclerView.Adapter<Recycler
         return users.size();
     }
 
+
+
+    public void setfilter(List<User> listitem) {
+        users = new ArrayList<>();
+        users.addAll(listitem);
+        notifyDataSetChanged();
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 

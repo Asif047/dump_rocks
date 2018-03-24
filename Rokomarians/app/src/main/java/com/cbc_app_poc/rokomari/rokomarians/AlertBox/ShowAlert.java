@@ -11,6 +11,7 @@ import com.cbc_app_poc.rokomari.rokomarians.GoodWork.PostNominateActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.DetailsSeeAll.DetailsSeeAllActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.HappyWallActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
+import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Activities.IdeaBoxActivity;
 import com.cbc_app_poc.rokomari.rokomarians.LogInActivity;
 import com.cbc_app_poc.rokomari.rokomarians.Profile.ProfileActivity;
 import com.cbc_app_poc.rokomari.rokomarians.RecreationHour.MyRecordActivity;
@@ -249,6 +250,26 @@ public class ShowAlert {
                 })
                 .show();
     }
+
+
+    public void showWarningNetIdeaBoxActivity()
+    {
+        sweetAlertDialog=new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
+        sweetAlertDialog.setCancelable(false);
+        sweetAlertDialog.setTitleText("No Internet Connection")
+                .setContentText("Please turn on the internet connection and then press OK")
+                .setConfirmText("OK")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        ((Activity)context).finish();
+                        Intent intent = new Intent(context, IdeaBoxActivity.class);
+                        context.startActivity(intent);
+                    }
+                })
+                .show();
+    }
+
 
 
 

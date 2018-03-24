@@ -135,6 +135,9 @@ public class DetailsSeeAllActivity extends AppCompatActivity {
 
         }
 
+
+
+
         ivLikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -179,13 +182,25 @@ public class DetailsSeeAllActivity extends AppCompatActivity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
-            if(pDialog.isShowing()){
-                pDialog.dismiss();
+            try{
+                if(pDialog.isShowing()){
+                    pDialog.dismiss();
+                }
+
+                tvname.setText(modelHappySeeAll.getName());
+                tvDetails.setText(modelHappySeeAll.getDetails());
+                tvLikeNumbers.setText(""+modelHappySeeAll.getNumberOfLikes());
+
+
+                if(modelHappySeeAll.getLiked()== true){
+                    ivLikes.setImageDrawable(getResources().getDrawable(R.drawable.ic_like_blue));
+                } else {
+                    ivLikes.setImageDrawable(getResources().getDrawable(R.drawable.ic_good_work));
+                }
+            } catch (Exception e){
+
             }
 
-            tvname.setText(modelHappySeeAll.getName());
-            tvDetails.setText(modelHappySeeAll.getDetails());
-            tvLikeNumbers.setText(""+modelHappySeeAll.getNumberOfLikes());
         }
 
         @Override

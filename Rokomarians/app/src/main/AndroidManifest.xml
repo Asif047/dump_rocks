@@ -19,10 +19,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".Journey.JourneyActivity" />
-        <activity android:name=".IdeaBox.IdeaBoxActivity" />
-        <activity
-            android:name=".IdeaBox.PostIdeaActivity"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".IdeaBox.Activities.IdeaBoxActivity" />
+
         <activity android:name=".GoodWork.GoodWorkActivity" />
         <activity android:name=".MeetMe.MeetMeActivity" />
         <activity
@@ -34,7 +32,7 @@
         <activity
             android:name=".GoodWork.PostNominateActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".Register.RegisterActivity"></activity>
+        <activity android:name=".Register.RegisterActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".Profile.ProfileActivity" />
         <activity android:name=".Profile.EditProfileActivity" />
@@ -45,24 +43,43 @@
         <activity android:name=".How_r_u_feeling.FeelingsActivity" />
         <activity android:name=".GoodWork.DetailsGoodWorkActivity" />
         <activity android:name=".HappyWall.DetailsMyHappyPostActivity" />
-        <activity android:name=".IdeaBox.DetailsIdeaActivity" />
+        <activity android:name=".IdeaBox.Activities.DetailsIdeaActivity">
+
+        </activity>
         <activity android:name=".RecreationHour.RecreationListActivity" />
         <activity android:name=".RecreationHour.ParticipateCategoryActivity" />
-        <activity android:name=".RecreationHour.ParticipateNowActivity" />
+        <activity
+            android:name=".RecreationHour.ParticipateNowActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".SplashActivity">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".RecreationHour.MyRecordActivity" />
-        <activity android:name=".RecreationHour.EditRecreationHourActivity" />
+        <activity
+            android:name=".RecreationHour.EditRecreationHourActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".HappyWall.UpdateHappyPost.UpdateHappyPostActivity" />
         <activity
             android:name=".HappyWall.DetailsSeeAll.DetailsSeeAllActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".HappyWall.LikeHappyPost.LikeResponseActivity"></activity>
+        <activity android:name=".HappyWall.LikeHappyPost.LikeResponseActivity" />
+
+        <activity android:name=".IdeaBox.Activities.DetailsMyIdeaActivity" >
+
+
+        </activity>
+        <activity android:name=".IdeaBox.Activities.EditMyIdeaActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+
+        </activity>
     </application>
 
 </manifest>

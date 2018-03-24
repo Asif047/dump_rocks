@@ -15,6 +15,7 @@ import android.view.View;
 import com.cbc_app_poc.rokomari.rokomarians.AlertBox.ShowAlert;
 import com.cbc_app_poc.rokomari.rokomarians.GoodWork.ShowNominatedList.ApiCallNominatedWork;
 import com.cbc_app_poc.rokomari.rokomarians.GoodWork.ShowNominatedList.RecyclerAdapterNominated;
+import com.cbc_app_poc.rokomari.rokomarians.HomeActivity;
 import com.cbc_app_poc.rokomari.rokomarians.Model.ModelNominated;
 import com.cbc_app_poc.rokomari.rokomarians.R;
 import com.cbc_app_poc.rokomari.rokomarians.Utils.MyNetworkCheck;
@@ -159,6 +160,16 @@ public class GoodWorkActivity extends AppCompatActivity {
 
         }
     }
+
+
+    //back button operation starts
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(GoodWorkActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    //back button operation ends
 
 
 }

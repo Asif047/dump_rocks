@@ -23,7 +23,10 @@ public class ModelHappySeeAll {
     private String image;
     @SerializedName("dateTime")
     @Expose
-    private Object dateTime;
+    private String dateTime;
+    @SerializedName("liked")
+    @Expose
+    private Boolean liked;
 
     public Integer getId() {
         return id;
@@ -65,12 +68,20 @@ public class ModelHappySeeAll {
         this.image = image;
     }
 
-    public Object getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Object dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public Boolean getLiked() {
+        return liked;
+    }
+
+    public void setLiked(Boolean liked) {
+        this.liked = liked;
     }
 
 

@@ -28,7 +28,7 @@ import com.cbc_app_poc.rokomari.rokomarians.AlertBox.ShowAlert;
 import com.cbc_app_poc.rokomari.rokomarians.GoodWork.GoodWorkActivity;
 import com.cbc_app_poc.rokomari.rokomarians.HappyWall.HappyWallActivity;
 import com.cbc_app_poc.rokomari.rokomarians.How_r_u_feeling.FeelingsActivity;
-import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.IdeaBoxActivity;
+import com.cbc_app_poc.rokomari.rokomarians.IdeaBox.Activities.IdeaBoxActivity;
 import com.cbc_app_poc.rokomari.rokomarians.Journey.SplashJourney;
 import com.cbc_app_poc.rokomari.rokomarians.MeetMe.MeetMeActivity;
 import com.cbc_app_poc.rokomari.rokomarians.Model.ModelHome;
